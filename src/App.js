@@ -20,41 +20,6 @@ function App() {
     return (
         <div>
             <Router>
-                {/* react bootstrap navbar start */}
-
-                {/* <Navbar bg="dark" variant="dark" expand="lg">
-                    <Container fluid>
-                        <Navbar.Toggle aria-controls="navbarScroll" />
-                        <Navbar.Collapse id="navbarScroll">
-                            <Nav
-                                className="me-auto my-2 my-lg-0"
-                                style={{ maxHeight: '100px' }}
-                                navbarScroll
-                            >
-                                <Nav.Link href="/home">Home</Nav.Link>
-                                <Nav.Link href="/meal">Meal</Nav.Link>
-                                <Nav.Link href="/search-meal">
-                                    Meal-Search
-                                </Nav.Link>
-                                <Nav.Link href="/about">About</Nav.Link>
-                            </Nav>
-                            <Form className="d-flex">
-                                <FormControl
-                                    type="search"
-                                    placeholder="Search"
-                                    className="me-2"
-                                    aria-label="Search"
-                                />
-                                <Button variant="outline-success">
-                                    Search
-                                </Button>
-                            </Form>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar> */}
-                {/* react bootstrap navbar end  */}
-
-                {/* router nav start */}
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-3">
                         <li className="nav-item">
