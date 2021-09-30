@@ -2,6 +2,7 @@ import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const MealDetail = () => {
     const { mealId } = useParams();
@@ -28,8 +29,10 @@ const MealDetail = () => {
                     <Card.Title className="fw-bold fs-1">{strMeal}</Card.Title>
                     <Card.Text>{strInstructions}</Card.Text>
                     <p className="fw-bolder">{strTags} </p>
-                    <p>{strYoutube}</p>
-                    <Button variant="primary">Go YouTube</Button>
+                    <p>YouTube: {strYoutube}</p>
+                    {/* <Link to={strYoutube}>
+                        <Button variant="primary">Go YouTube</Button>
+                    </Link> */}
                 </Card.Body>
             </Card>
         </div>

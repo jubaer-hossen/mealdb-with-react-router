@@ -1,11 +1,15 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const MealSearchShow = props => {
     // console.log(props.meal);
+    const history = useHistory();
     const { strMeal, strInstructions, strMealThumb, idMeal } = props.meal;
     const url = `/mealDetail/${idMeal}`;
+    const handleClick = () => {
+        history.push(url);
+    };
     return (
         <div className="my-4">
             <Card className="card h-100 shadow" style={{ width: '18rem' }}>
@@ -13,10 +17,12 @@ const MealSearchShow = props => {
                 <Card.Body>
                     <Card.Title>{strMeal}</Card.Title>
                     <Card.Text>{strInstructions?.slice(0, 100)}</Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <p>Meal id: {idMeal}</p>
+                    <Button onClick={handleClick} variant="primary">
+                        Click For Details
+                    </Button>
                 </Card.Body>
-                <p>{idMeal}</p>
-                <Link to={url}>Detail</Link>
+                {/* <Link to={url}>Detail</Link> */}
             </Card>
         </div>
     );
