@@ -18,9 +18,9 @@ import NotFound from './components/Not-found/NotFound';
 
 function App() {
     return (
-        <div>
+        <div className="mt-5">
             <Router>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-3">
                         <li className="nav-item">
                             <Link className="nav-link active" exact to="/">

@@ -14,7 +14,7 @@ const Meal = () => {
             .then(data => setMeals(data.categories));
     }, []);
     return (
-        <div className="meal mt-5">
+        <div className="meal mt-5 pt-5">
             {meals.map(meal => (
                 <ShowMeal key={meal.idCategory} meal={meal}></ShowMeal>
             ))}

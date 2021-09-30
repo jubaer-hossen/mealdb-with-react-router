@@ -19,9 +19,9 @@ const MealSearch = () => {
 
     return (
         <div className="text-center">
-            <div>
+            <div className="bg-primary pt-2">
                 <input
-                    className="p-2 w-50 my-4"
+                    className="p-2 w-50 my-4 text-white"
                     onChange={handleSearchField}
                     placeholder="Search Meal you want"
                     type="text"
