@@ -15,6 +15,7 @@ import About from './components/about/About';
 // } from 'react-bootstrap';
 import MealSearch from './components/showMeal/MealSearch';
 import NotFound from './components/Not-found/NotFound';
+import MealDetail from './components/mealDetails/MealDetail';
 
 function App() {
     return (
@@ -53,7 +54,7 @@ function App() {
                     <Route path="/home">
                         <Home></Home>
                     </Route>
-                    <Route path="/meal">
+                    <Route exact path="/meal">
                         <Meal></Meal>
                     </Route>
                     <Route path="/search-meal">
@@ -61,6 +62,9 @@ function App() {
                     </Route>
                     <Route path="/about">
                         <About></About>
+                    </Route>
+                    <Route path="/mealDetail/:mealId">
+                        <MealDetail></MealDetail>
                     </Route>
                     <Route exact path="*">
                         <NotFound></NotFound>

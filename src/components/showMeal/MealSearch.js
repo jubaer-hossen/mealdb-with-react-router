@@ -30,7 +30,7 @@ const MealSearch = () => {
             <div className="meal">
                 {meals.map(meal => (
                     <MealSearchShow
-                        key={meal.strMealId}
+                        key={meal.idMeal}
                         meal={meal}
                     ></MealSearchShow>
                 ))}
