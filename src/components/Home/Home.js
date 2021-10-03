@@ -13,20 +13,20 @@ import './Home.css';
 
 const Home = () => {
     return (
-        <div className="back-img text-center text-white pt-5">
-            <div className="text">
+        <div className="back-img text-white pt-5 d-flex align-items-center justify-content-center">
+            <div className="text text-center">
                 <h1>Welcome To Meal Db </h1>
                 <h3>
                     If you want meal Please, click the meal button and find the
                     meal you want
                 </h3>
-            </div>
-            <div>
-                <Link to="/meal">
-                    <button className="btn btn-primary fs-3 mt-3">
-                        Click For Meal
-                    </button>
-                </Link>
+                <div>
+                    <Link to="/meal">
+                        <button className="btn btn-primary fs-3 mt-3">
+                            Click For Meal
+                        </button>
+                    </Link>
+                </div>
             </div>
         </div>
     );
