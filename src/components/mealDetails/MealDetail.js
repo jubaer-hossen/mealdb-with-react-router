@@ -19,21 +19,36 @@ const MealDetail = () => {
     return (
         <div className="text-center pt-5">
             <h1>Meal Details of: {mealId}</h1>
-            <Card
-                className="w-50 my-5 h-100 shadow mx-auto"
-                style={{ width: '18rem' }}
-            >
-                <Card.Img variant="top" src={strMealThumb} />
-                <Card.Body>
-                    <Card.Title className="fw-bold fs-1">{strMeal}</Card.Title>
-                    <Card.Text>{strInstructions}</Card.Text>
-                    <p className="fw-bolder">{strTags} </p>
-                    <p>YouTube: {strYoutube}</p>
-                    {/* <Link to={strYoutube}>
+            {meal.length === 0 && (
+                <div class="d-flex justify-content-center pt-5">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            )}
+            <div className="row mt-5 d-flex align-items-center justify-content-center">
+                <div className="col-md-5">
+                    <Card.Img
+                        className="rounded-circle"
+                        variant="top"
+                        src={strMealThumb}
+                    />
+                    {/* <img src={strMealThumb} alt="" /> */}
+                </div>
+                <div className="col-md-6">
+                    <Card.Body>
+                        <Card.Title className="fw-bold fs-1">
+                            {strMeal}
+                        </Card.Title>
+                        <Card.Text>{strInstructions}</Card.Text>
+                        <p className="fw-bolder">{strTags} </p>
+                        <p>YouTube: {strYoutube}</p>
+                        {/* <Link to={strYoutube}>
                         <Button variant="primary">Go YouTube</Button>
                     </Link> */}
-                </Card.Body>
-            </Card>
+                    </Card.Body>
+                </div>
+            </div>
         </div>
     );
 };
