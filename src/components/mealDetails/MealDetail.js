@@ -1,19 +1,18 @@
-import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 
 const MealDetail = () => {
     const { mealId } = useParams();
     const [meal, setMeal] = useState([]);
+
     useEffect(() => {
         const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
 
         fetch(url)
             .then(res => res.json())
             .then(data => setMeal(data.meals[0]));
-    }, []);
+    }, [mealId]);
     // console.log(meal);
     const { strMeal, strMealThumb, strInstructions, strTags, strYoutube } =
         meal;

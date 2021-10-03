@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
-import { Link, useHistory } from 'react-router-dom';
+import { Card } from 'react-bootstrap';
 
 const ShowMeal = props => {
     // console.log(props.meal);
@@ -11,10 +10,7 @@ const ShowMeal = props => {
         strCategoryThumb,
         idCategory,
     } = props.meal;
-    const url = `/mealDetail/${idCategory}`;
-    // const handleClick = () => {
-    //     history.push(url);
-    // };
+
     return (
         <div className="mb-4 text-center">
             <Card className="card h-100 shadow" style={{ width: '18rem' }}>
@@ -24,12 +20,8 @@ const ShowMeal = props => {
                     <Card.Text>
                         {strCategoryDescription.slice(0, 100)}
                     </Card.Text>
-                    {/* <Button variant="primary">Go somewhere</Button> */}
-                    <br />
-                    {/* <button onClick={handleClick}>Details</button> */}
                 </Card.Body>
-                <p>{idCategory} </p>
-                {/* <Link to={url}>Details</Link> */}
+                <p>Meal Id: {idCategory} </p>
             </Card>
         </div>
     );
