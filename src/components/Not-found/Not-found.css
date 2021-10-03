@@ -1,0 +1,11 @@
+.error-img {
+    background-image: url(../../5203299.jpg);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: top;
+    background-size: 35%;
+    height: 100vh;
+}
+.error-img button {
+    margin-top: 30%;
+}

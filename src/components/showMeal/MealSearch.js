@@ -21,14 +21,14 @@ const MealSearch = () => {
         <div className="text-center">
             <div className="bg-primary pt-2">
                 <input
-                    className="p-2 w-50 my-4 text-white"
+                    className="p-2 w-50 my-4 text-dark"
                     onChange={handleSearchField}
                     placeholder="Search Meal you want"
                     type="text"
                 />
             </div>
             <div className="meal">
-                {meals.map(meal => (
+                {meals?.map(meal => (
                     <MealSearchShow
                         key={meal.idMeal}
                         meal={meal}
